@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pauline Kwok: Data Strategist & Storyteller</title>
+<title>Pauline Kwok { Data Strategist & Storyteller }</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
   *,*::before,*::after{box-sizing:border-box;}
-  body{margin:0;padding:0;font-family:'Inter',sans-serif;color:#3a3a3a;background:#fff;}
-  .rp-nav{background:rgba(255,255,255,0.93);border-bottom:0.5px solid rgba(201,223,218,0.5);padding:16px 48px;display:flex;align-items:center;justify-content:space-between;}
+  html{scroll-padding-top:78px;}
+  body{margin:0;padding:58px 0 0;font-family:'Inter',sans-serif;color:#3a3a3a;background:#fff;}
+  .rp-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:0.5px solid rgba(201,223,218,0.65);box-shadow:0 10px 28px rgba(94,135,136,0.06);padding:16px 48px;display:flex;align-items:center;justify-content:space-between;}
   .rp-nav-logo{font-size:17px;font-weight:600;color:#2a2a2a;letter-spacing:-0.02em;}
   .rp-nav-logo span{color:#8EAFAA;}
   .rp-nav-links{display:flex;gap:30px;align-items:center;}
   .rp-nav-links a{font-size:12px;font-weight:400;color:#5a5a5a;text-decoration:none;cursor:pointer;transition:color 0.2s;}
   .rp-nav-links a:hover{color:#5E8788;}
   .rp-hero{display:grid;grid-template-columns:1fr 2fr;min-height:88vh;position:relative;}
-  .rp-hero-left{background:linear-gradient(160deg,#F4F2EE 0%,#E2ECE9 30%,#C9DFDA 60%,#D9E2DF 85%,#F4F2EE 100%);background-size:300% 300%;animation:hg 12s ease infinite;}
-  @keyframes hg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .rp-hero-left{position:relative;overflow:hidden;background:linear-gradient(160deg,#8FBFBE 0%,#A9D0CC 32%,#C9DFDA 68%,#D9E2DF 100%);}
+  .rp-hero-left::before,.rp-hero-left::after{content:'';position:absolute;inset:-34%;background-repeat:no-repeat;filter:blur(34px);pointer-events:none;will-change:transform,opacity;}
+  .rp-hero-left::before{background:linear-gradient(118deg,rgba(255,255,255,0) 6%,rgba(217,226,223,0.38) 28%,rgba(255,255,255,0) 52%),linear-gradient(238deg,rgba(143,191,190,0) 16%,rgba(143,191,190,0.18) 44%,rgba(143,191,190,0) 72%);opacity:0.48;animation:silk-wash-a 42s ease-in-out infinite;}
+  .rp-hero-left::after{background:linear-gradient(32deg,rgba(255,255,255,0) 14%,rgba(201,223,218,0.22) 42%,rgba(255,255,255,0) 70%),linear-gradient(305deg,rgba(169,208,204,0.2) 0%,rgba(169,208,204,0) 46%,rgba(143,191,190,0.12) 76%,rgba(143,191,190,0) 100%);opacity:0.34;animation:silk-wash-b 55s ease-in-out infinite;}
+  @keyframes silk-wash-a{0%{transform:translate3d(-7%,-3%,0) scale(1.04) rotate(-4deg);opacity:0.38}28%{transform:translate3d(3%,2%,0) scale(1.11) rotate(2deg);opacity:0.54}58%{transform:translate3d(7%,5%,0) scale(1.06) rotate(5deg);opacity:0.46}100%{transform:translate3d(-7%,-3%,0) scale(1.04) rotate(-4deg);opacity:0.38}}
+  @keyframes silk-wash-b{0%{transform:translate3d(6%,4%,0) scale(1.1) rotate(3deg);opacity:0.28}38%{transform:translate3d(-4%,6%,0) scale(1.04) rotate(-3deg);opacity:0.4}72%{transform:translate3d(-7%,-2%,0) scale(1.12) rotate(1deg);opacity:0.33}100%{transform:translate3d(6%,4%,0) scale(1.1) rotate(3deg);opacity:0.28}}
   .rp-hero-right{background:#fff;display:flex;flex-direction:column;justify-content:center;padding:72px 40px 72px 220px;}
   .rp-float-card{position:absolute;left:calc(32% - 118px);top:50%;transform:translateY(-50%);background:#fff;border:0.5px solid rgba(201,223,218,0.7);border-radius:14px;padding:36px 28px;text-align:center;width:300px;z-index:10;box-shadow:0 8px 40px rgba(94,135,136,0.13);}
   .rp-avatar{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,#C9DFDA 0%,#8EAFAA 100%);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
   .rp-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
   .rp-card-name{font-size:17px;font-weight:600;color:#2a2a2a;margin:0 0 4px;letter-spacing:-0.02em;line-height:1.25;white-space:nowrap;}
   .rp-card-divider{width:32px;height:2px;background:#8EAFAA;margin:12px auto 14px;border-radius:2px;}
-  .rp-card-role{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#8EAFAA;margin:0 0 20px;font-weight:400;}
+  .rp-card-role{font-size:11.3px;letter-spacing:0.14em;text-transform:uppercase;color:#8EAFAA;margin:0 0 8px;font-weight:500;}
+  .rp-card-location{font-family:'Cormorant Garamond',serif;font-size:13.5px;color:#7a8a8b;margin:0 0 20px;font-weight:450;}
   .rp-card-socials{display:flex;gap:16px;justify-content:center;}
   .rp-card-socials a{color:#3a3a3a;font-size:17px;text-decoration:none;opacity:0.55;transition:opacity 0.2s;}
   .rp-card-socials a:hover{opacity:1;}
@@ -34,8 +40,8 @@
   .rp-btn-solid{background:#5E8788;color:#fff;border:none;padding:12px 28px;border-radius:40px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.2s;}
   .rp-btn-solid:hover{background:#49585A;}
   .rp-btn-solid:disabled{opacity:0.6;cursor:default;}
-  .rp-btn-outline{background:transparent;color:#2a2a2a;border:1.5px solid #2a2a2a;padding:12px 28px;border-radius:40px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.2s;}
-  .rp-btn-outline:hover{background:#f5f5f5;}
+  .rp-btn-outline{background:transparent;color:#5E8788;border:1.5px solid #8FBFBE;padding:12px 28px;border-radius:40px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.25s ease,color 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease;}
+  .rp-btn-outline:hover{background:#C9DFDA;color:#3a5e5e;border-color:#C9DFDA;box-shadow:0 8px 22px rgba(143,191,190,0.18);transform:translateY(-1px);}
   .rp-hero-bio{font-size:12.5px;line-height:1.9;color:#5a5a5a;max-width:420px;}
   .rp-rule{height:0.5px;background:#edeae5;}
   .rp-section{padding:72px 52px;max-width:880px;margin:0 auto;}
@@ -44,12 +50,13 @@
   .rp-h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:#2a2a2a;margin:0 0 44px;line-height:1.1;}
   .rp-exp-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
   .rp-exp-h3{font-size:13px;font-weight:500;color:#3a3a3a;margin:0;}
-  .rp-dl-btn{background:#5E8788;color:#fff;border:none;padding:8px 18px;border-radius:7px;font-size:11px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:6px;}
+  .rp-dl-btn{background:#5E8788;color:#fff;border:1px solid transparent;padding:8px 18px;border-radius:7px;font-size:11px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:6px;transition:background 0.25s ease,color 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease;}
+  .rp-dl-btn:hover{background:#F4F2EE;color:#3f6364;border-color:#A9D0CC;box-shadow:0 8px 22px rgba(94,135,136,0.12);transform:translateY(-1px);}
   .rp-job{border:0.5px solid #edeae5;border-radius:10px;padding:24px 28px;margin-bottom:14px;background:#faf9f7;display:grid;grid-template-columns:168px 1fr;gap:20px;}
   .rp-job-date{font-size:11px;font-weight:500;color:#8EAFAA;margin:0 0 4px;}
   .rp-job-title{font-size:11px;font-weight:600;color:#5E8788;letter-spacing:0.06em;text-transform:uppercase;margin:0 0 3px;}
-  .rp-job-co{font-size:13px;color:#3a3a3a;margin:0 0 2px;font-weight:500;}
-  .rp-job-loc{font-size:11px;color:#aaa;margin:0;}
+  .rp-job-co{font-family:'Cormorant Garamond',serif;font-size:15.5px;color:#454545;margin:0 0 2px;font-weight:800;}
+  .rp-job-loc{font-size:11px;color:#7a7a7a;margin:0;}
   .rp-job-body{font-size:13px;line-height:1.8;color:#5a5a5a;}
   .rp-job-body ul{margin:0;padding-left:16px;}
   .rp-job-body li{margin-bottom:5px;}
@@ -57,21 +64,25 @@
   .rp-skill-box{background:#faf9f7;border:0.5px solid #edeae5;border-radius:10px;padding:20px;}
   .rp-skill-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#5E8788;font-weight:500;margin:0 0 12px;}
   .rp-pill{display:inline-block;background:#eef5f4;color:#3a5e5e;font-size:11px;padding:4px 10px;border-radius:20px;margin:0 5px 6px 0;border:0.5px solid #C9DFDA;}
-  .rp-proj-card{border:0.5px solid #edeae5;border-radius:10px;overflow:hidden;margin-bottom:14px;display:grid;grid-template-columns:1fr 220px;background:#faf9f7;transition:border-color 0.2s;}
-  .rp-proj-card:hover{border-color:#8EAFAA;}
+  .rp-proj-card{border:0.5px solid #edeae5;border-radius:10px;overflow:hidden;margin-bottom:14px;display:grid;grid-template-columns:1fr 220px;background:#faf9f7;transition:border-color 0.25s ease,box-shadow 0.25s ease,transform 0.25s ease,background 0.25s ease;}
+  .rp-proj-card:hover{border-color:#A9D0CC;background:#fffdf9;box-shadow:0 10px 30px rgba(94,135,136,0.11);transform:translateY(-2px);}
   .rp-proj-body{padding:24px 28px;}
   .rp-proj-num {font-family: 'Cormorant Garamond', serif;font-size: 22px;color: #8EAFAA;margin: 0 0 6px;}
   .rp-proj-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:#2a2a2a;margin:0 0 2px;}
-  .rp-proj-title a{color:#2a2a2a;text-decoration:none;transition:color 0.2s;}
-  .rp-proj-title a:hover{color:#5E8788;}
+  .rp-proj-title a{color:#2a2a2a;text-decoration:none;transition:color 0.25s ease;}
+  .rp-proj-title a:hover{color:#4f7878;}
   .rp-proj-sub{font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#8EAFAA;margin:0 0 14px;}
   .rp-proj-desc{font-size:13px;line-height:1.8;color:#5a5a5a;margin:0;}
   .rp-proj-thumb{background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;border-left:0.5px solid #edeae5;}
-  .rp-proj-thumb img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block;}
+  .rp-proj-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
+  .rp-proj-thumb.is-top-left img{object-position:top left;}
   .rp-proj-email-note{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:11px;color:#5E8788;font-weight:500;letter-spacing:0.04em;background:#eef5f4;border:0.5px solid #C9DFDA;border-radius:6px;padding:5px 10px;text-decoration:none;}
   .rp-proj-email-note:hover{background:#C9DFDA;}
-  .rp-contact-wrap{background:linear-gradient(160deg,#F4F2EE 0%,#E2ECE9 50%,#D9E2DF 100%);padding:72px 52px;text-align:center;}
-  .rp-contact-inner{max-width:500px;margin:0 auto;}
+  .rp-contact-wrap{position:relative;overflow:hidden;background:linear-gradient(160deg,#F4F2EE 0%,#F4F2EE 18%,#E2ECE9 52%,#D9E2DF 100%);padding:72px 52px;text-align:center;}
+  .rp-contact-wrap::before,.rp-contact-wrap::after{content:'';position:absolute;inset:-34%;background-repeat:no-repeat;filter:blur(36px);pointer-events:none;will-change:transform,opacity;}
+  .rp-contact-wrap::before{background:linear-gradient(126deg,rgba(255,255,255,0) 8%,rgba(244,242,238,0.5) 32%,rgba(255,255,255,0) 58%),linear-gradient(250deg,rgba(143,191,190,0) 18%,rgba(143,191,190,0.15) 48%,rgba(143,191,190,0) 76%);opacity:0.54;animation:silk-wash-a 48s ease-in-out infinite reverse;}
+  .rp-contact-wrap::after{background:linear-gradient(36deg,rgba(255,255,255,0) 12%,rgba(201,223,218,0.18) 46%,rgba(255,255,255,0) 74%),linear-gradient(300deg,rgba(244,242,238,0.3) 0%,rgba(244,242,238,0) 48%,rgba(143,191,190,0.1) 78%,rgba(143,191,190,0) 100%);opacity:0.36;animation:silk-wash-b 62s ease-in-out infinite reverse;}
+  .rp-contact-inner{position:relative;z-index:1;max-width:500px;margin:0 auto;}
   .rp-contact-form{background:rgba(255,255,255,0.9);border:0.5px solid rgba(201,223,218,0.6);border-radius:14px;padding:36px;text-align:left;margin-top:36px;}
   .rp-form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px;}
   .rp-form-field{margin-bottom:13px;}
@@ -95,6 +106,8 @@
   .rp-footer-socials a:hover{opacity:0.75;}
 
   @media (max-width: 760px){
+    html{scroll-padding-top:86px;}
+    body{padding-top:74px;}
     .rp-nav{
       padding:14px 18px;
       gap:16px;
@@ -179,6 +192,9 @@
       height:230px;
       border-left:0;
       border-top:0.5px solid #edeae5;
+    }
+    .rp-proj-thumb img{
+      object-position:top left;
     }
 
     .rp-contact-wrap{
@@ -267,6 +283,7 @@
     <p class="rp-card-name">Pauline Kwok</p>
     <div class="rp-card-divider"></div>
     <p class="rp-card-role">Data Strategist &amp; Storyteller</p>
+    <p class="rp-card-location">Greater Toronto Area</p>
     <div class="rp-card-socials">
       <a href="https://www.linkedin.com/in/pauline-kwok/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
       <a href="https://github.com/paulinekwok" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
@@ -371,7 +388,7 @@
       <p class="rp-proj-sub">Sample ThoughtSpot Dashboard</p>
       <p class="rp-proj-desc">A company health and workforce dashboard built in ThoughtSpot to support staffing decisions, license cleanup, and workforce planning across brands and locations. Focused on surfacing operational gaps, adoption trends, and QA opportunities with a self-serve, cross-functional audience in mind.</p>
     </div>
-    <div class="rp-proj-thumb"><img src="assets/thoughtspot.png" alt="ThoughtSpot workforce dashboard"></div>
+    <div class="rp-proj-thumb is-top-left"><img src="assets/thoughtspot.png" alt="ThoughtSpot workforce dashboard"></div>
   </div>
 
   <div class="rp-proj-card">
@@ -402,7 +419,7 @@
       <p class="rp-proj-sub">Sample Tableau Dashboard</p>
       <p class="rp-proj-desc">An interactive Tableau dashboard tracking headcount, attrition, diversity, and hiring trends across an organization. Features filters for departments, locations, and time periods so HR and people teams can uncover workforce insights and act on them with confidence.</p>
     </div>
-    <div class="rp-proj-thumb"><img src="assets/people-analytics.png" alt="People Analytics Tableau dashboard"></div>
+    <div class="rp-proj-thumb is-top-left"><img src="assets/people-analytics.png" alt="People Analytics Tableau dashboard"></div>
   </div>
 </div>
 
@@ -434,6 +451,10 @@
     <div>
       <p class="rp-footer-col-label">Write</p>
       <p class="rp-footer-col-val"><a href="mailto:paulinekwok@live.com">paulinekwok@live.com</a></p>
+    </div>
+    <div>
+      <p class="rp-footer-col-label">Based</p>
+      <p class="rp-footer-col-val">Greater Toronto Area</p>
     </div>
     <div>
       <p class="rp-footer-col-label">Connect</p>
